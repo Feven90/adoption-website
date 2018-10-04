@@ -18,6 +18,7 @@ const allPets = () => {
   newString += `<div class="card-body text-success">`;
   newString += `<h5 class="card-title">Name: ${pets.name}</h5>`;
   newString += `<h5 class="card-title">Color: ${pets.color}</h5>`;
+  newString += `<h5 class="card-title">Type: ${pets.type}</h5>`;
   newString +=  `image: <img class="card-img-top" src="${pets.imageUrl}">`;
   newString += `</div>`;
   newString += `</div>`;
