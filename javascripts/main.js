@@ -1,7 +1,9 @@
-import {allPets} from './components/petComponent.js'
+import {getCharacters} from './data/petData.js';
+import {sortEvent} from './components/petComponent.js';
 
 const initializeApp = () => {
-   allPets();
+    getCharacters();
+   sortEvent();
     // charactersBuilder();
 }
 initializeApp();
