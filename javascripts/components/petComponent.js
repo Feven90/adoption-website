@@ -11,24 +11,21 @@ const getCharacterz = () => {
 
 const sortPets = (e) => {
     const type = e.target.id;
+    console.log(type);
 
     if(type === 'all'){
         allPets(pet);
-        console.log("all button is clicked");
     }
     if(type=== 'cat'){
         const filterCats = pet.filter(x => x.type === type);
-        console.log(filterCats);
         allPets(filterCats); 
     }
     if(type=== 'dog'){
         const filterDogs = pet.filter(x => x.type === type);
-        console.log(filterDogs);
         allPets(filterDogs); 
     }
     if(type=== 'dino'){
         const filterDinos = pet.filter(x => x.type === type);
-        console.log(filterDinos);
         allPets(filterDinos); 
     }
     };
@@ -44,19 +41,35 @@ const sortEvent = () => {
     dogsButton.addEventListener('click',sortPets);
     dinosButton.addEventListener('click',sortPets);
 }
+
+const typeStringBuilder = (type) => {
+    switch(type) {
+        case "cat":
+        return `<h3 class="card-footer bg-primary">${type}</h3>`;
+        case "dog":
+        return `<h3 class="card-footer bg-info">${type}</h3>`
+        default:
+        return `<h3 class="card-footer bg-warning">${type}</h3>`
+    }
+}
 const allPets = (petsArray) => {
     let newString = '';
-    petsArray.forEach((pet) => {
-  newString += `<div class="d-flex align-content-start flex-wrap " style="max-width: 18rem;">`;
-  newString += `<div class="card">`;
-  newString += `<div class="card-body text-success">`;
-  newString += `<h5 class="card-title">Name: ${pet.name}</h5>`;
-  newString += `<h3 class="card-title">Color: ${pet.color}</h3>`;
-  newString += `<h3 class="card-title">Type: ${pet.type}</h3>`;
-  newString +=  `image: <img class="card-img-top" src="${pet.imageUrl}">`;
+    petsArray.forEach((pets,i) => {
+if (i%3===0) {
+    newString += `<div class="card-deck">`;
+}
+  newString += `<div class="card col-4">`;
+  newString += `<h5 class="card-header"> ${pets.name}</h5>`;
+  newString +=  ` <img class="card-img-top" src="${pets.imageUrl}">`;
+  newString += `<div class="card-body">`;
+  newString += `<h3 class="card-title"> ${pets.color}</h3>`;
   newString += `</div>`;
+  newString += typeStringBuilder(pets.type);
   newString += `</div>`;
-  newString += `</div>`;
+if(i%3===2 || i===petsArray.length-1){
+    newString += `</div>`;
+}
+
 });
 printToDom(newString);
 };

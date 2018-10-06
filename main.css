@@ -1,11 +1,21 @@
-body {
+/* body {
     background-color: bisque;
+} */
+.card-deck {
+    margin: 15px;
+    justify-content: center;
 }
-.character-card {
-    display: inline-block;
+.row{
+    justify-content: center;
+}
+.pets{
+    padding: 15px;
+}
+.btn {
+    width:200px; 
 }
 .card-img-top{
-    height: 280px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
     object-position: 0 0;
