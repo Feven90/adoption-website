@@ -30,18 +30,6 @@ const sortPets = (e) => {
     }
     };
 
-const sortEvent = () => {
-    const allButton = document.getElementById('all');
-    const catsButton = document.getElementById('cat');
-    const dogsButton = document.getElementById('dog');
-    const dinosButton = document.getElementById('dino');
-
-    allButton.addEventListener('click', sortPets);
-    catsButton.addEventListener('click', sortPets);
-    dogsButton.addEventListener('click',sortPets);
-    dinosButton.addEventListener('click',sortPets);
-}
-
 const typeStringBuilder = (type) => {
     switch(type) {
         case "cat":
@@ -58,11 +46,12 @@ const allPets = (petsArray) => {
 if (i%3===0) {
     newString += `<div class="card-deck">`;
 }
-  newString += `<div class="card col-4">`;
+  newString += `<div class="card col-3 text-center">`;
   newString += `<h5 class="card-header"> ${pets.name}</h5>`;
   newString +=  ` <img class="card-img-top" src="${pets.imageUrl}">`;
   newString += `<div class="card-body">`;
   newString += `<h3 class="card-title"> ${pets.color}</h3>`;
+  newString += `<p class="card-title"> ${pets.specialSkill}</p>`;
   newString += `</div>`;
   newString += typeStringBuilder(pets.type);
   newString += `</div>`;
@@ -73,4 +62,4 @@ if(i%3===2 || i===petsArray.length-1){
 });
 printToDom(newString);
 };
-export{allPets,sortEvent,setCharacters,getCharacterz}
+export{allPets,setCharacters,getCharacterz,sortPets}

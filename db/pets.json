@@ -131,7 +131,7 @@
       "color": "Blue",
       "specialSkill": "Listens attentively to boring stories.",
       "type": "dog",
-      "imageUrl": "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      "imageUrl": "http://images1.fanpop.com/images/photos/1900000/Puppy-3-dogs-1993798-1024-768.jpg"
     },
     {
       "name": "Spooky",
@@ -209,13 +209,6 @@
       "specialSkill": "Doesn’t get weirded out by the word “moist.”",
       "type": "dino",
       "imageUrl": "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
-    },
-    {
-      "name": "Oscar",
-      "color": "Green",
-      "specialSkill": "Gives hugs with appropriate pressure and for the right length of time.",
-      "type": "cat",
-      "imageUrl": "http://img.izismile.com/img/img2/20090219/cats_02.jpg"
     }
   ]
 }

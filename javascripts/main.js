@@ -1,5 +1,5 @@
 import {getCharacters} from './data/petData.js';
-import {sortEvent} from './components/petComponent.js';
+import {sortEvent} from './events.js';
 
 const initializeApp = () => {
     getCharacters();
