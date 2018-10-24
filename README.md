@@ -6,6 +6,8 @@
     * HTML5 
     * CSS 
     * JavaScript 
+    * Bootstrap 4 
+    * ES6 Modules 
 
 
 ## Description 
